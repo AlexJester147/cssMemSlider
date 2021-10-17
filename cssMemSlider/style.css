@@ -14,19 +14,20 @@ body {
 }
 
 .wrapper {
-  height: 500px;
+  height: 90%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	width: 700px;
+	row-gap: 20px;
+	width: 95%;
 }
 
 .slider {
 	background-color: #ddd;
-	height: inherit;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
-	width: inherit;
+	width: 100%;
 	border-radius: 10px;
 	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
@@ -44,10 +45,10 @@ body {
 	width: inherit;
 }
 
-.slide1 { background-image: url(../cssMemSlider/assets/1.jpg); }
-.slide2 { background-image: url(../cssMemSlider/assets/2.jpg); }
-.slide3 { background-image: url(../cssMemSlider/assets/3.jpg); }
-.slide4 { background-image: url(../cssMemSlider/assets/4.jpg); }
+.slide1 { background-image: url(/assets/1.jpg); }
+.slide2 { background-image: url(/assets/2.jpg); }
+.slide3 { background-image: url(/assets/3.jpg); }
+.slide4 { background-image: url(/assets/4.jpg); }
 
 
 .slide1, .slide2, .slide3, .slide4{
@@ -62,24 +63,11 @@ body {
 }
 
 .wrapper label {
-	cursor: pointer;
-	display: inline-block;
-	height: 14px;
-	margin: 25px 12px 0 16px;
-	position: relative;
-	width: 15px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
-}
-
-.wrapper label {
   background-color: skyblue;
 	cursor: pointer;
 	display: inline-block;
 	height: 15px;
-	margin: 25px 12px 0 16px;
+	margin: 3px 12px 0 16px;
 	position: relative;
 	width: 15px;
 	-webkit-border-radius: 50%;
@@ -92,13 +80,22 @@ body {
 	transition: background ease-in-out .5s;
 }
 
+.wrapper label:before{
+	position:absolute;
+	content:'';
+	top:-12px;
+	right:-12px;
+	left:-12px;
+	bottom:-12px;
+}
+
 
 #slide1:checked ~ .controls-caption__wrap .controls label:nth-of-type(1),
 #slide2:checked ~ .controls-caption__wrap .controls label:nth-of-type(2),
 #slide3:checked ~ .controls-caption__wrap .controls label:nth-of-type(3),
-#slide4:checked ~ .controls-caption__wrap.controls label:nth-of-type(4){
+#slide4:checked ~ .controls-caption__wrap .controls label:nth-of-type(4){
 	background: transparent;
-  border: 1px solid white;
+  border: 1px solid skyblue;
 }
 
 .wrapper label:hover{
@@ -120,6 +117,7 @@ body {
 .slider-caption{
 	width: 100%;
   overflow: hidden;
+  height: 80px;
 }
 
 .slider-caption > div{
@@ -133,7 +131,7 @@ body {
 .controls-caption__wrap{
 	display: flex;
   justify-content: space-between;
-	align-items: end;
+	align-items: flex-start;
 }
 
 #slide1:checked ~ .slider > .slide1,
@@ -161,4 +159,16 @@ body {
   100%{
     transform: translateX(0%);
   }
+}
+
+
+@media screen and (max-width:640px){
+	.controls-caption__wrap{
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+
+	.wrapper .controls {
+		margin: auto;
+	}
 }
