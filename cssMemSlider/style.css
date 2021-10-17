@@ -28,7 +28,7 @@ body {
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	border-radius: 10px;
+	border-radius: 20px;
 	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
@@ -45,10 +45,10 @@ body {
 	width: inherit;
 }
 
-.slide1 { background-image: url(/assets/1.jpg); }
-.slide2 { background-image: url(/assets/2.jpg); }
-.slide3 { background-image: url(/assets/3.jpg); }
-.slide4 { background-image: url(/assets/4.jpg); }
+.slide1 { background-image: url(../cssMemSlider/assets/1.jpg); }
+.slide2 { background-image: url(../cssMemSlider/assets/2.jpg); }
+.slide3 { background-image: url(../cssMemSlider/assets/3.jpg); }
+.slide4 { background-image: url(../cssMemSlider/assets/4.jpg); }
 
 
 .slide1, .slide2, .slide3, .slide4{
@@ -60,6 +60,7 @@ body {
 .wrapper .controls {
   display: flex;
   justify-content: end;
+	width: 40%;
 }
 
 .wrapper label {
@@ -169,6 +170,7 @@ body {
 	}
 
 	.wrapper .controls {
-		margin: auto;
+		width: 100%;
+		justify-content: center;
 	}
 }
