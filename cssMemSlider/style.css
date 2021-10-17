@@ -44,10 +44,10 @@ body {
 	width: inherit;
 }
 
-.slide1 { background-image: url(/assets/1.jpg); }
-.slide2 { background-image: url(/assets/2.jpg); }
-.slide3 { background-image: url(/assets/3.jpg); }
-.slide4 { background-image: url(/assets/4.jpg); }
+.slide1 { background-image: url(../cssMemSlider/assets/1.jpg); }
+.slide2 { background-image: url(../cssMemSlider/assets/2.jpg); }
+.slide3 { background-image: url(../cssMemSlider/assets/3.jpg); }
+.slide4 { background-image: url(../cssMemSlider/assets/4.jpg); }
 
 
 .slide1, .slide2, .slide3, .slide4{
